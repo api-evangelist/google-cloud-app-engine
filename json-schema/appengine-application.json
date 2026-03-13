@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-search/google-cloud-app-engine/refs/heads/main/json-schema/appengine-application.json",
+  "title": "Google Cloud App Engine Application",
+  "description": "Represents an App Engine application resource, including its configuration, services, and serving status.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full path to the Application resource in the API."
+    },
+    "id": {
+      "type": "string",
+      "description": "Identifier of the Application resource, equivalent to the project ID."
+    },
+    "authDomain": {
+      "type": "string",
+      "description": "Google Apps authentication domain that controls which users can access the application."
+    },
+    "locationId": {
+      "type": "string",
+      "description": "Location from which this application runs."
+    },
+    "codeBucket": {
+      "type": "string",
+      "description": "Google Cloud Storage bucket used to store application code."
+    },
+    "defaultBucket": {
+      "type": "string",
+      "description": "Google Cloud Storage bucket for default storage."
+    },
+    "servingStatus": {
+      "type": "string",
+      "description": "Current serving status of the application.",
+      "enum": [
+        "UNSPECIFIED",
+        "SERVING",
+        "USER_DISABLED",
+        "SYSTEM_DISABLED"
+      ]
+    },
+    "defaultHostname": {
+      "type": "string",
+      "description": "Hostname used to reach this application."
+    },
+    "gcrDomain": {
+      "type": "string",
+      "description": "The Google Container Registry domain used for storing managed build docker images."
+    },
+    "dispatchRules": {
+      "type": "array",
+      "description": "HTTP path dispatch rules for requests to the application.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": ["id"]
+}

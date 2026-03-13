@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "@vocab": "https://cloud.google.com/appengine/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "gcp": "https://cloud.google.com/schema#",
+    "Application": "gcp:AppEngineApplication",
+    "Service": "gcp:AppEngineService",
+    "Version": "gcp:AppEngineVersion",
+    "Instance": "gcp:AppEngineInstance",
+    "name": "schema:name",
+    "description": "schema:description",
+    "id": "schema:identifier",
+    "locationId": "gcp:locationId",
+    "servingStatus": "gcp:servingStatus",
+    "runtime": "gcp:runtime",
+    "createTime": {
+      "@id": "dcterms:created",
+      "@type": "xsd:dateTime"
+    },
+    "defaultHostname": {
+      "@id": "schema:url",
+      "@type": "xsd:string"
+    },
+    "instanceClass": "gcp:instanceClass",
+    "memoryUsage": {
+      "@id": "gcp:memoryUsage",
+      "@type": "xsd:string"
+    }
+  }
+}

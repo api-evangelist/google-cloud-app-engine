@@ -1,0 +1,51 @@
+name: Google Cloud App Engine
+description: >-
+  Google Cloud App Engine is a fully managed, serverless platform for developing
+  and hosting web applications at scale. It supports popular programming languages
+  and provides built-in services and APIs such as NoSQL datastores, memcache, and
+  a user authentication API, allowing developers to focus on writing code without
+  managing the underlying infrastructure.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-search/google-cloud-app-engine/refs/heads/main/apis.yml
+created: '2026-03-13'
+modified: '2026-03-13'
+specificationVersion: '0.18'
+tags:
+  - Google Cloud
+  - Serverless
+  - PaaS
+  - App Engine
+  - Web Applications
+  - Compute
+apis:
+  - name: Google Cloud App Engine Admin API
+    description: >-
+      The App Engine Admin API enables developers to provision and manage their
+      App Engine applications programmatically, including deploying new versions,
+      managing traffic splitting, configuring services, and monitoring application
+      health.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://cloud.google.com/appengine/docs/admin-api
+    baseURL: https://appengine.googleapis.com
+    tags:
+      - Applications
+      - Services
+      - Versions
+      - Instances
+      - Deployments
+    properties:
+      - type: OpenAPI
+        url: openapi/appengine-openapi.yml
+      - type: JSONSchema
+        url: json-schema/appengine-application.json
+common:
+  - type: GettingStarted
+    url: https://cloud.google.com/appengine/docs/getting-started
+  - type: Pricing
+    url: https://cloud.google.com/appengine/pricing
+  - type: JSON-LD
+    url: json-ld/appengine-context.jsonld
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
