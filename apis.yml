@@ -1,3 +1,4 @@
+aid: google-cloud-app-engine
 name: Google Cloud App Engine
 description: >-
   Google Cloud App Engine is a fully managed, serverless platform for developing
@@ -9,8 +10,9 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 url: >-
   https://raw.githubusercontent.com/api-search/google-cloud-app-engine/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+type: Index
 tags:
   - Google Cloud
   - Serverless
@@ -35,15 +37,35 @@ apis:
       - Instances
       - Deployments
     properties:
+      - type: Documentation
+        url: https://cloud.google.com/appengine/docs/admin-api/reference/rest
       - type: OpenAPI
         url: openapi/appengine-openapi.yml
+      - type: Authentication
+        url: https://cloud.google.com/appengine/docs/admin-api/access-control
+      - type: Getting Started
+        url: https://cloud.google.com/appengine/docs/getting-started
       - type: JSONSchema
         url: json-schema/appengine-application.json
 common:
-  - type: GettingStarted
+  - type: Portal
+    url: https://cloud.google.com/appengine
+  - type: Getting Started
     url: https://cloud.google.com/appengine/docs/getting-started
+  - type: Documentation
+    url: https://cloud.google.com/appengine/docs
+  - type: Authentication
+    url: https://cloud.google.com/docs/authentication
   - type: Pricing
     url: https://cloud.google.com/appengine/pricing
+  - type: Terms of Service
+    url: https://cloud.google.com/terms
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://cloud.google.com/appengine/docs/support
   - type: JSON-LD
     url: json-ld/appengine-context.jsonld
 maintainers:
