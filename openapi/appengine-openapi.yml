@@ -17,12 +17,10 @@ servers:
 tags:
   - name: Applications
     description: Manage App Engine applications
-  - name: Services
-    description: Manage services within an application
-  - name: Versions
-    description: Manage versions of a service
   - name: Instances
     description: Manage instances running a version
+  - name: Versions
+    description: Manage versions of a service
 paths:
   /apps/{appsId}:
     get:
@@ -74,8 +72,7 @@ paths:
       operationId: listServices
       summary: Google Cloud App Engine List Services
       description: Lists all the services in the application.
-      tags:
-        - Services
+      tags: []
       parameters:
         - name: appsId
           in: path
@@ -101,8 +98,7 @@ paths:
       operationId: getService
       summary: Google Cloud App Engine Get Service
       description: Gets the current configuration of the specified service.
-      tags:
-        - Services
+      tags: []
       parameters:
         - name: appsId
           in: path
@@ -125,8 +121,7 @@ paths:
       operationId: deleteService
       summary: Google Cloud App Engine Delete Service
       description: Deletes the specified service and all enclosed versions.
-      tags:
-        - Services
+      tags: []
       parameters:
         - name: appsId
           in: path
