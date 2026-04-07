@@ -27,7 +27,7 @@ paths:
   /apps/{appsId}:
     get:
       operationId: getApplication
-      summary: Get Application
+      summary: Google Cloud App Engine Get Application
       description: Gets information about an application.
       tags:
         - Applications
@@ -47,7 +47,7 @@ paths:
                 $ref: '#/components/schemas/Application'
     patch:
       operationId: updateApplication
-      summary: Update Application
+      summary: Google Cloud App Engine Update Application
       description: Updates the specified Application resource.
       tags:
         - Applications
@@ -72,7 +72,7 @@ paths:
   /apps/{appsId}/services:
     get:
       operationId: listServices
-      summary: List Services
+      summary: Google Cloud App Engine List Services
       description: Lists all the services in the application.
       tags:
         - Services
@@ -99,7 +99,7 @@ paths:
   /apps/{appsId}/services/{servicesId}:
     get:
       operationId: getService
-      summary: Get Service
+      summary: Google Cloud App Engine Get Service
       description: Gets the current configuration of the specified service.
       tags:
         - Services
@@ -123,7 +123,7 @@ paths:
                 $ref: '#/components/schemas/Service'
     delete:
       operationId: deleteService
-      summary: Delete Service
+      summary: Google Cloud App Engine Delete Service
       description: Deletes the specified service and all enclosed versions.
       tags:
         - Services
@@ -148,7 +148,7 @@ paths:
   /apps/{appsId}/services/{servicesId}/versions:
     get:
       operationId: listVersions
-      summary: List Versions
+      summary: Google Cloud App Engine List Versions
       description: Lists the versions of a service.
       tags:
         - Versions
@@ -179,7 +179,7 @@ paths:
                     type: string
     post:
       operationId: createVersion
-      summary: Create Version
+      summary: Google Cloud App Engine Create Version
       description: Deploys code and resource files to a new version.
       tags:
         - Versions
@@ -209,7 +209,7 @@ paths:
   /apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances:
     get:
       operationId: listInstances
-      summary: List Instances
+      summary: Google Cloud App Engine List Instances
       description: Lists the instances of a version.
       tags:
         - Instances
