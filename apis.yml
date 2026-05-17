@@ -42,14 +42,14 @@ apis:
         url: openapi/appengine-openapi.yml
       - type: Authentication
         url: https://cloud.google.com/appengine/docs/admin-api/access-control
-      - type: Getting Started
+      - type: GettingStarted
         url: https://cloud.google.com/appengine/docs/getting-started
       - type: JSONSchema
         url: json-schema/appengine-application.json
 common:
   - type: Portal
     url: https://cloud.google.com/appengine
-  - type: Getting Started
+  - type: GettingStarted
     url: https://cloud.google.com/appengine/docs/getting-started
   - type: Documentation
     url: https://cloud.google.com/appengine/docs
@@ -57,15 +57,15 @@ common:
     url: https://cloud.google.com/docs/authentication
   - type: Pricing
     url: https://cloud.google.com/appengine/pricing
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://cloud.google.com/terms
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://policies.google.com/privacy
-  - type: Status
+  - type: StatusPage
     url: https://status.cloud.google.com/
   - type: Support
     url: https://cloud.google.com/appengine/docs/support
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/appengine-context.jsonld
   - type: Integrations
     url: https://cloud.google.com/marketplace
