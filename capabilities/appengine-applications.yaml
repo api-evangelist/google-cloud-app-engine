@@ -1,0 +1,121 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud App Engine Admin API — Applications
+  description: 'Google Cloud App Engine Admin API — Applications. 2 operations. Lead operation: Google Cloud App Engine Get
+    Application. Self-contained Naftiko capability covering one Google Cloud App Engine business surface.'
+  tags:
+  - Google Cloud App Engine
+  - Applications
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_APP_ENGINE_API_KEY: GOOGLE_CLOUD_APP_ENGINE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: appengine-applications
+    baseUri: https://appengine.googleapis.com/v1
+    description: Google Cloud App Engine Admin API — Applications business capability. Self-contained, no shared references.
+    resources:
+    - name: apps-appsId
+      path: /apps/{appsId}
+      operations:
+      - name: getapplication
+        method: GET
+        description: Google Cloud App Engine Get Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: appsId
+          in: path
+          type: string
+          description: The application ID.
+          required: true
+      - name: updateapplication
+        method: PATCH
+        description: Google Cloud App Engine Update Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: appsId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_APP_ENGINE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: appengine-applications-rest
+    port: 8080
+    description: REST adapter for Google Cloud App Engine Admin API — Applications. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/apps/{appsid}
+      name: apps-appsid
+      description: REST surface for apps-appsId.
+      operations:
+      - method: GET
+        name: getapplication
+        description: Google Cloud App Engine Get Application
+        call: appengine-applications.getapplication
+        with:
+          appsId: rest.appsId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateapplication
+        description: Google Cloud App Engine Update Application
+        call: appengine-applications.updateapplication
+        with:
+          appsId: rest.appsId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: appengine-applications-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud App Engine Admin API — Applications. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: google-cloud-app-engine-get
+      description: Google Cloud App Engine Get Application
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: appengine-applications.getapplication
+      with:
+        appsId: tools.appsId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-app-engine-update
+      description: Google Cloud App Engine Update Application
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: appengine-applications.updateapplication
+      with:
+        appsId: tools.appsId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

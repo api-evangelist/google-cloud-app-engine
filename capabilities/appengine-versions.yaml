@@ -1,0 +1,132 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud App Engine Admin API — Versions
+  description: 'Google Cloud App Engine Admin API — Versions. 2 operations. Lead operation: Google Cloud App Engine List Versions.
+    Self-contained Naftiko capability covering one Google Cloud App Engine business surface.'
+  tags:
+  - Google Cloud App Engine
+  - Versions
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_APP_ENGINE_API_KEY: GOOGLE_CLOUD_APP_ENGINE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: appengine-versions
+    baseUri: https://appengine.googleapis.com/v1
+    description: Google Cloud App Engine Admin API — Versions business capability. Self-contained, no shared references.
+    resources:
+    - name: apps-appsId-services-servicesId-versions
+      path: /apps/{appsId}/services/{servicesId}/versions
+      operations:
+      - name: listversions
+        method: GET
+        description: Google Cloud App Engine List Versions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: appsId
+          in: path
+          type: string
+          required: true
+        - name: servicesId
+          in: path
+          type: string
+          required: true
+      - name: createversion
+        method: POST
+        description: Google Cloud App Engine Create Version
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: appsId
+          in: path
+          type: string
+          required: true
+        - name: servicesId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_APP_ENGINE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: appengine-versions-rest
+    port: 8080
+    description: REST adapter for Google Cloud App Engine Admin API — Versions. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/apps/{appsid}/services/{servicesid}/versions
+      name: apps-appsid-services-servicesid-versions
+      description: REST surface for apps-appsId-services-servicesId-versions.
+      operations:
+      - method: GET
+        name: listversions
+        description: Google Cloud App Engine List Versions
+        call: appengine-versions.listversions
+        with:
+          appsId: rest.appsId
+          servicesId: rest.servicesId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createversion
+        description: Google Cloud App Engine Create Version
+        call: appengine-versions.createversion
+        with:
+          appsId: rest.appsId
+          servicesId: rest.servicesId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: appengine-versions-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud App Engine Admin API — Versions. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: google-cloud-app-engine-list
+      description: Google Cloud App Engine List Versions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: appengine-versions.listversions
+      with:
+        appsId: tools.appsId
+        servicesId: tools.servicesId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-app-engine-create
+      description: Google Cloud App Engine Create Version
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: appengine-versions.createversion
+      with:
+        appsId: tools.appsId
+        servicesId: tools.servicesId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

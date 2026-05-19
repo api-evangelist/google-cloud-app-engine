@@ -1,0 +1,91 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud App Engine Admin API — Instances
+  description: 'Google Cloud App Engine Admin API — Instances. 1 operations. Lead operation: Google Cloud App Engine List
+    Instances. Self-contained Naftiko capability covering one Google Cloud App Engine business surface.'
+  tags:
+  - Google Cloud App Engine
+  - Instances
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_APP_ENGINE_API_KEY: GOOGLE_CLOUD_APP_ENGINE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: appengine-instances
+    baseUri: https://appengine.googleapis.com/v1
+    description: Google Cloud App Engine Admin API — Instances business capability. Self-contained, no shared references.
+    resources:
+    - name: apps-appsId-services-servicesId-versions-versionsId-instances
+      path: /apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances
+      operations:
+      - name: listinstances
+        method: GET
+        description: Google Cloud App Engine List Instances
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: appsId
+          in: path
+          type: string
+          required: true
+        - name: servicesId
+          in: path
+          type: string
+          required: true
+        - name: versionsId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_APP_ENGINE_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: appengine-instances-rest
+    port: 8080
+    description: REST adapter for Google Cloud App Engine Admin API — Instances. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/apps/{appsid}/services/{servicesid}/versions/{versionsid}/instances
+      name: apps-appsid-services-servicesid-versions-versionsid-instances
+      description: REST surface for apps-appsId-services-servicesId-versions-versionsId-instances.
+      operations:
+      - method: GET
+        name: listinstances
+        description: Google Cloud App Engine List Instances
+        call: appengine-instances.listinstances
+        with:
+          appsId: rest.appsId
+          servicesId: rest.servicesId
+          versionsId: rest.versionsId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: appengine-instances-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud App Engine Admin API — Instances. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: google-cloud-app-engine-list
+      description: Google Cloud App Engine List Instances
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: appengine-instances.listinstances
+      with:
+        appsId: tools.appsId
+        servicesId: tools.servicesId
+        versionsId: tools.versionsId
+      outputParameters:
+      - type: object
+        mapping: $.
