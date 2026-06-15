@@ -1,0 +1,237 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud App Engine Admin API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Applications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud App Engine Get Application",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path",
+                "description": "The application ID."
+              }
+            ]
+          },
+          "docs": "Gets information about an application."
+        },
+        {
+          "info": {
+            "name": "Google Cloud App Engine Update Application",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the specified Application resource."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Default",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud App Engine List Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all the services in the application."
+        },
+        {
+          "info": {
+            "name": "Google Cloud App Engine Get Service",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services/:servicesId",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "servicesId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets the current configuration of the specified service."
+        },
+        {
+          "info": {
+            "name": "Google Cloud App Engine Delete Service",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services/:servicesId",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "servicesId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes the specified service and all enclosed versions."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Versions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud App Engine List Versions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services/:servicesId/versions",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "servicesId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the versions of a service."
+        },
+        {
+          "info": {
+            "name": "Google Cloud App Engine Create Version",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services/:servicesId/versions",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "servicesId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deploys code and resource files to a new version."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Instances",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud App Engine List Instances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services/:servicesId/versions/:versionsId/instances",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "servicesId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "versionsId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the instances of a version."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
