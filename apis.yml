@@ -44,6 +44,8 @@ apis:
       - type: JSONSchema
         url: json-schema/appengine-application.json
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-cloud-app-engine-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-cloud-app-engine-vulnerability-disclosure.yml
   - type: DomainSecurity
