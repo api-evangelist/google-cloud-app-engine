@@ -5,7 +5,20 @@ description: >-
   It supports popular programming languages and provides built-in services and APIs such as NoSQL datastores, memcache,
   and a user authentication API, allowing developers to focus on writing code without managing the underlying
   infrastructure.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud-app-engine.png
 url: https://raw.githubusercontent.com/api-search/google-cloud-app-engine/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -19,31 +32,81 @@ tags:
   - Serverless
   - Web Applications
 apis:
-  - name: Google Cloud App Engine Admin API
-    description: >-
-      The App Engine Admin API enables developers to provision and manage their App Engine applications
-      programmatically, including deploying new versions, managing traffic splitting, configuring services, and
-      monitoring application health.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://cloud.google.com/appengine/docs/admin-api
-    baseURL: https://appengine.googleapis.com
-    tags:
-      - Applications
-      - Deployments
-      - Instances
-      - Versions
-    properties:
-      - type: Documentation
-        url: https://cloud.google.com/appengine/docs/admin-api/reference/rest
-      - type: OpenAPI
-        url: openapi/appengine-openapi.yml
-      - type: Authentication
-        url: https://cloud.google.com/appengine/docs/admin-api/access-control
-      - type: GettingStarted
-        url: https://cloud.google.com/appengine/docs/getting-started
-      - type: JSONSchema
-        url: json-schema/appengine-application.json
+- aid: google-cloud-app-engine:google-cloud-app-engine-applications-api
+  name: Google Cloud App Engine Applications API
+  description: Manage App Engine applications
+  humanURL: https://cloud.google.com/appengine/docs/admin-api
+  baseURL: https://appengine.googleapis.com
+  tags:
+  - Applications
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-app-engine-applications-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/appengine/docs/admin-api/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/appengine/docs/admin-api/access-control
+  - type: GettingStarted
+    url: https://cloud.google.com/appengine/docs/getting-started
+  - type: JSONSchema
+    url: json-schema/appengine-application.json
+- aid: google-cloud-app-engine:google-cloud-app-engine-apps-api
+  name: Google Cloud App Engine Apps API
+  description: The Apps API from Google Cloud App Engine — 2 operation(s) for apps.
+  humanURL: https://cloud.google.com/appengine/docs/admin-api
+  baseURL: https://appengine.googleapis.com
+  tags:
+  - Apps
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-app-engine-apps-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/appengine/docs/admin-api/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/appengine/docs/admin-api/access-control
+  - type: GettingStarted
+    url: https://cloud.google.com/appengine/docs/getting-started
+  - type: JSONSchema
+    url: json-schema/appengine-application.json
+- aid: google-cloud-app-engine:google-cloud-app-engine-instances-api
+  name: Google Cloud App Engine Instances API
+  description: Manage instances running a version
+  humanURL: https://cloud.google.com/appengine/docs/admin-api
+  baseURL: https://appengine.googleapis.com
+  tags:
+  - Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-app-engine-instances-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/appengine/docs/admin-api/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/appengine/docs/admin-api/access-control
+  - type: GettingStarted
+    url: https://cloud.google.com/appengine/docs/getting-started
+  - type: JSONSchema
+    url: json-schema/appengine-application.json
+- aid: google-cloud-app-engine:google-cloud-app-engine-versions-api
+  name: Google Cloud App Engine Versions API
+  description: Manage versions of a service
+  humanURL: https://cloud.google.com/appengine/docs/admin-api
+  baseURL: https://appengine.googleapis.com
+  tags:
+  - Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-app-engine-versions-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/appengine/docs/admin-api/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/appengine/docs/admin-api/access-control
+  - type: GettingStarted
+    url: https://cloud.google.com/appengine/docs/getting-started
+  - type: JSONSchema
+    url: json-schema/appengine-application.json
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-cloud-app-engine/overview
   - type: AgenticAccess
     url: agentic-access/google-cloud-app-engine-agentic-access.yml
   - type: VulnerabilityDisclosure
