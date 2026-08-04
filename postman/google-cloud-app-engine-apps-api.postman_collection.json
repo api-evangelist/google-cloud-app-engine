@@ -1,0 +1,373 @@
+{
+  "info": {
+    "_postman_id": "b5094299-62f4-4d1c-967f-938fb398bb9a",
+    "name": "Google Cloud App Engine Admin Applications Apps API",
+    "description": "Provisions and manages developer App Engine applications, including deploying versions, managing traffic, and configuring services.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:45:53.000Z",
+    "updatedAt": "2026-07-28T01:45:53.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b5094299-62f4-4d1c-967f-938fb398bb9a"
+  },
+  "item": [
+    {
+      "name": "apps",
+      "item": [
+        {
+          "name": "{appsId}",
+          "item": [
+            {
+              "name": "services",
+              "item": [
+                {
+                  "name": "{servicesId}",
+                  "item": [
+                    {
+                      "name": "Google Cloud App Engine Get Service",
+                      "id": "4fa60e2b-7d8e-4a01-9fe1-035ba567e58f",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "apps",
+                            ":appsId",
+                            "services",
+                            ":servicesId"
+                          ],
+                          "variable": [
+                            {
+                              "id": "eacd663d-f6ab-42ec-8248-839f23eb33f3",
+                              "key": "appsId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            },
+                            {
+                              "id": "8e2e911c-8148-4399-be3b-0ff90f9bcad7",
+                              "key": "servicesId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Gets the current configuration of the specified service."
+                      },
+                      "response": [
+                        {
+                          "id": "cee816ad-455b-49d7-9ae1-2fa6c3876381",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "apps",
+                                ":appsId",
+                                "services",
+                                ":servicesId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "appsId"
+                                },
+                                {
+                                  "key": "servicesId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"name\": \"<string>\",\n  \"id\": \"<string>\",\n  \"split\": {\n    \"shardBy\": \"<string>\",\n    \"allocations\": {\n      \"eiusmod__41\": \"<number>\",\n      \"ex_1_7\": \"<number>\",\n      \"dolor_951\": \"<number>\"\n    }\n  }\n}",
+                          "createdAt": "2026-07-28T01:45:53.000Z",
+                          "updatedAt": "2026-07-28T01:45:53.000Z",
+                          "uid": "35240-cee816ad-455b-49d7-9ae1-2fa6c3876381"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:45:53.000Z",
+                      "updatedAt": "2026-07-28T01:45:53.000Z",
+                      "uid": "35240-4fa60e2b-7d8e-4a01-9fe1-035ba567e58f"
+                    },
+                    {
+                      "name": "Google Cloud App Engine Delete Service",
+                      "id": "dad2fd3f-b07b-4cb2-a8ce-6801cea3badd",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "apps",
+                            ":appsId",
+                            "services",
+                            ":servicesId"
+                          ],
+                          "variable": [
+                            {
+                              "id": "fa710990-0708-4283-bba0-0fad8505fb8c",
+                              "key": "appsId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            },
+                            {
+                              "id": "166bb90c-83ee-4fdb-a87d-7563b6d44cda",
+                              "key": "servicesId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Deletes the specified service and all enclosed versions."
+                      },
+                      "response": [
+                        {
+                          "id": "d5dcba46-b552-4677-914f-cfbfa9696c46",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: oauth2",
+                                "key": "Authorization",
+                                "value": "<token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "apps",
+                                ":appsId",
+                                "services",
+                                ":servicesId"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "appsId"
+                                },
+                                {
+                                  "key": "servicesId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  },\n  \"response\": {},\n  \"metadata\": {}\n}",
+                          "createdAt": "2026-07-28T01:45:53.000Z",
+                          "updatedAt": "2026-07-28T01:45:53.000Z",
+                          "uid": "35240-d5dcba46-b552-4677-914f-cfbfa9696c46"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T01:45:53.000Z",
+                      "updatedAt": "2026-07-28T01:45:53.000Z",
+                      "uid": "35240-dad2fd3f-b07b-4cb2-a8ce-6801cea3badd"
+                    }
+                  ],
+                  "id": "8dbfde5b-716f-4c24-93cc-18ecb26cd965",
+                  "createdAt": "2026-07-28T01:45:53.000Z",
+                  "updatedAt": "2026-07-28T01:45:53.000Z",
+                  "uid": "35240-8dbfde5b-716f-4c24-93cc-18ecb26cd965"
+                },
+                {
+                  "name": "Google Cloud App Engine List Services",
+                  "id": "5672866c-3ff4-4aa5-85b9-a83aba17e343",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/apps/:appsId/services",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "apps",
+                        ":appsId",
+                        "services"
+                      ],
+                      "variable": [
+                        {
+                          "id": "46ed59aa-665f-4ad3-bc4f-60836ad238e6",
+                          "key": "appsId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Lists all the services in the application."
+                  },
+                  "response": [
+                    {
+                      "id": "d18d7b55-38f9-4992-8356-2097cdc6c3d2",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/apps/:appsId/services",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "apps",
+                            ":appsId",
+                            "services"
+                          ],
+                          "variable": [
+                            {
+                              "key": "appsId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"services\": [\n    {\n      \"name\": \"<string>\",\n      \"id\": \"<string>\",\n      \"split\": {\n        \"shardBy\": \"<string>\",\n        \"allocations\": {\n          \"laborum_b2\": \"<number>\",\n          \"incididunt_45\": \"<number>\"\n        }\n      }\n    },\n    {\n      \"name\": \"<string>\",\n      \"id\": \"<string>\",\n      \"split\": {\n        \"shardBy\": \"<string>\",\n        \"allocations\": {\n          \"temporf\": \"<number>\"\n        }\n      }\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:45:53.000Z",
+                      "updatedAt": "2026-07-28T01:45:53.000Z",
+                      "uid": "35240-d18d7b55-38f9-4992-8356-2097cdc6c3d2"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:45:53.000Z",
+                  "updatedAt": "2026-07-28T01:45:53.000Z",
+                  "uid": "35240-5672866c-3ff4-4aa5-85b9-a83aba17e343"
+                }
+              ],
+              "id": "f1d1c941-f2eb-4d90-a12d-5fb4fce856d4",
+              "createdAt": "2026-07-28T01:45:53.000Z",
+              "updatedAt": "2026-07-28T01:45:53.000Z",
+              "uid": "35240-f1d1c941-f2eb-4d90-a12d-5fb4fce856d4"
+            }
+          ],
+          "id": "24bcf278-b479-4f3e-903e-996bcc3e9948",
+          "createdAt": "2026-07-28T01:45:53.000Z",
+          "updatedAt": "2026-07-28T01:45:53.000Z",
+          "uid": "35240-24bcf278-b479-4f3e-903e-996bcc3e9948"
+        }
+      ],
+      "id": "77618404-491b-46f3-9c9b-49c16af67946",
+      "createdAt": "2026-07-28T01:45:53.000Z",
+      "updatedAt": "2026-07-28T01:45:53.000Z",
+      "uid": "35240-77618404-491b-46f3-9c9b-49c16af67946"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/appengine.admin https://www.googleapis.com/auth/cloud-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://appengine.googleapis.com/v1"
+    }
+  ]
+}

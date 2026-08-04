@@ -1,0 +1,324 @@
+{
+  "info": {
+    "_postman_id": "98c2054d-99eb-4052-b315-00c2141763a2",
+    "name": "Google Cloud App Engine Admin Applications Versions API",
+    "description": "Provisions and manages developer App Engine applications, including deploying versions, managing traffic, and configuring services.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:45:55.000Z",
+    "updatedAt": "2026-07-28T01:45:55.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-98c2054d-99eb-4052-b315-00c2141763a2"
+  },
+  "item": [
+    {
+      "name": "apps",
+      "item": [
+        {
+          "name": "{appsId}",
+          "item": [
+            {
+              "name": "services",
+              "item": [
+                {
+                  "name": "{servicesId}",
+                  "item": [
+                    {
+                      "name": "versions",
+                      "item": [
+                        {
+                          "name": "Google Cloud App Engine List Versions",
+                          "id": "a401c6b3-6ced-46ef-86ae-0beed06bd9d7",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId/versions",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "apps",
+                                ":appsId",
+                                "services",
+                                ":servicesId",
+                                "versions"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "1fa05d68-7c5c-42cd-81b3-9f1b48a469cf",
+                                  "key": "appsId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "97f0e3c2-3a92-4f3d-b5b8-b62f332e6e74",
+                                  "key": "servicesId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Lists the versions of a service."
+                          },
+                          "response": [
+                            {
+                              "id": "7290a47e-c86e-4b0e-a41c-1f1844b680c1",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId/versions",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "apps",
+                                    ":appsId",
+                                    "services",
+                                    ":servicesId",
+                                    "versions"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "appsId"
+                                    },
+                                    {
+                                      "key": "servicesId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"versions\": [\n    {\n      \"name\": \"<string>\",\n      \"id\": \"<string>\",\n      \"runtime\": \"<string>\",\n      \"env\": \"<string>\",\n      \"servingStatus\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"createdBy\": \"<string>\",\n      \"instanceClass\": \"<string>\",\n      \"versionUrl\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"id\": \"<string>\",\n      \"runtime\": \"<string>\",\n      \"env\": \"<string>\",\n      \"servingStatus\": \"<string>\",\n      \"createTime\": \"<dateTime>\",\n      \"createdBy\": \"<string>\",\n      \"instanceClass\": \"<string>\",\n      \"versionUrl\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                              "createdAt": "2026-07-28T01:45:56.000Z",
+                              "updatedAt": "2026-07-28T01:45:56.000Z",
+                              "uid": "35240-7290a47e-c86e-4b0e-a41c-1f1844b680c1"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:45:55.000Z",
+                          "updatedAt": "2026-07-28T01:45:55.000Z",
+                          "uid": "35240-a401c6b3-6ced-46ef-86ae-0beed06bd9d7"
+                        },
+                        {
+                          "name": "Google Cloud App Engine Create Version",
+                          "id": "7fcd4931-ad0e-475e-b71b-80f7c5263ae4",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"name\": \"<string>\",\n  \"id\": \"<string>\",\n  \"runtime\": \"<string>\",\n  \"env\": \"<string>\",\n  \"servingStatus\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"createdBy\": \"<string>\",\n  \"instanceClass\": \"<string>\",\n  \"versionUrl\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId/versions",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "apps",
+                                ":appsId",
+                                "services",
+                                ":servicesId",
+                                "versions"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "cf66ec96-4f7d-4565-9d0c-6178389b69fe",
+                                  "key": "appsId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "1f71ae92-7175-42ba-a84c-d8117c6582ca",
+                                  "key": "servicesId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Deploys code and resource files to a new version."
+                          },
+                          "response": [
+                            {
+                              "id": "64506ace-fe6a-4b20-9667-51dc7717147a",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"id\": \"<string>\",\n  \"runtime\": \"<string>\",\n  \"env\": \"<string>\",\n  \"servingStatus\": \"<string>\",\n  \"createTime\": \"<dateTime>\",\n  \"createdBy\": \"<string>\",\n  \"instanceClass\": \"<string>\",\n  \"versionUrl\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/apps/:appsId/services/:servicesId/versions",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "apps",
+                                    ":appsId",
+                                    "services",
+                                    ":servicesId",
+                                    "versions"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "appsId"
+                                    },
+                                    {
+                                      "key": "servicesId"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"name\": \"<string>\",\n  \"done\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  },\n  \"response\": {},\n  \"metadata\": {}\n}",
+                              "createdAt": "2026-07-28T01:45:56.000Z",
+                              "updatedAt": "2026-07-28T01:45:56.000Z",
+                              "uid": "35240-64506ace-fe6a-4b20-9667-51dc7717147a"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:45:55.000Z",
+                          "updatedAt": "2026-07-28T01:45:55.000Z",
+                          "uid": "35240-7fcd4931-ad0e-475e-b71b-80f7c5263ae4"
+                        }
+                      ],
+                      "id": "edb4dd60-5147-40f2-bdf7-9f832e83bf88",
+                      "createdAt": "2026-07-28T01:45:55.000Z",
+                      "updatedAt": "2026-07-28T01:45:55.000Z",
+                      "uid": "35240-edb4dd60-5147-40f2-bdf7-9f832e83bf88"
+                    }
+                  ],
+                  "id": "1c862d5f-26ca-4936-91a0-93fea597d580",
+                  "createdAt": "2026-07-28T01:45:55.000Z",
+                  "updatedAt": "2026-07-28T01:45:55.000Z",
+                  "uid": "35240-1c862d5f-26ca-4936-91a0-93fea597d580"
+                }
+              ],
+              "id": "c6520a3c-556e-469b-9582-69bcce0b5e48",
+              "createdAt": "2026-07-28T01:45:55.000Z",
+              "updatedAt": "2026-07-28T01:45:55.000Z",
+              "uid": "35240-c6520a3c-556e-469b-9582-69bcce0b5e48"
+            }
+          ],
+          "id": "8e74427e-5797-44c0-9a84-5be0941c3e5a",
+          "createdAt": "2026-07-28T01:45:55.000Z",
+          "updatedAt": "2026-07-28T01:45:55.000Z",
+          "uid": "35240-8e74427e-5797-44c0-9a84-5be0941c3e5a"
+        }
+      ],
+      "id": "20fb6de6-ba4c-44a2-a0b6-65e8f9e3c5cd",
+      "createdAt": "2026-07-28T01:45:55.000Z",
+      "updatedAt": "2026-07-28T01:45:55.000Z",
+      "uid": "35240-20fb6de6-ba4c-44a2-a0b6-65e8f9e3c5cd"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/appengine.admin https://www.googleapis.com/auth/cloud-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://appengine.googleapis.com/v1"
+    }
+  ]
+}
