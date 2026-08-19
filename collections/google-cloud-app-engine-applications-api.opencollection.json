@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud App Engine Admin Applications API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Applications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud App Engine Get Application",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path",
+                "description": "The application ID."
+              }
+            ]
+          },
+          "docs": "Gets information about an application."
+        },
+        {
+          "info": {
+            "name": "Google Cloud App Engine Update Application",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the specified Application resource."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

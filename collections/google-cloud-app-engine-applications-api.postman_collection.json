@@ -1,0 +1,266 @@
+{
+  "item": [
+    {
+      "id": "a9a52641-67f3-41f9-9d09-aafd9de68afc",
+      "name": "Applications",
+      "description": {
+        "content": "Manage App Engine applications",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "887bc220-b65e-4d2e-ab39-369566d36549",
+          "name": "Google Cloud App Engine Get Application",
+          "request": {
+            "name": "Google Cloud App Engine Get Application",
+            "description": {
+              "content": "Gets information about an application.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "apps",
+                ":appsId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "appsId",
+                  "description": "(Required) The application ID."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dc5ed60e-371c-4f4d-a3f1-78b52a775a61",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":appsId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "appsId",
+                      "description": "(Required) The application ID."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"id\": \"string\",\n  \"authDomain\": \"string\",\n  \"locationId\": \"string\",\n  \"codeBucket\": \"string\",\n  \"defaultBucket\": \"string\",\n  \"servingStatus\": \"USER_DISABLED\",\n  \"defaultHostname\": \"string\",\n  \"gcrDomain\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5dff7e31-6a92-4941-9476-0b632ef8744d",
+          "name": "Google Cloud App Engine Update Application",
+          "request": {
+            "name": "Google Cloud App Engine Update Application",
+            "description": {
+              "content": "Updates the specified Application resource.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "apps",
+                ":appsId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "appsId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"id\": \"<string>\",\n  \"authDomain\": \"<string>\",\n  \"locationId\": \"<string>\",\n  \"codeBucket\": \"<string>\",\n  \"defaultBucket\": \"<string>\",\n  \"servingStatus\": \"<string>\",\n  \"defaultHostname\": \"<string>\",\n  \"gcrDomain\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "52cfe361-4650-43eb-8175-9a718c4bc8b3",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "apps",
+                    ":appsId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "appsId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"id\": \"<string>\",\n  \"authDomain\": \"<string>\",\n  \"locationId\": \"<string>\",\n  \"codeBucket\": \"<string>\",\n  \"defaultBucket\": \"<string>\",\n  \"servingStatus\": \"<string>\",\n  \"defaultHostname\": \"<string>\",\n  \"gcrDomain\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"done\": false,\n  \"error\": {\n    \"code\": 7349,\n    \"message\": \"string\"\n  },\n  \"response\": {},\n  \"metadata\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://appengine.googleapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/appengine.admin https://www.googleapis.com/auth/cloud-platform"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "bdf76157-561c-4d3c-9306-025158bb29fd",
+    "name": "Google Cloud App Engine Admin Applications API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Provisions and manages developer App Engine applications, including deploying versions, managing traffic, and configuring services.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}

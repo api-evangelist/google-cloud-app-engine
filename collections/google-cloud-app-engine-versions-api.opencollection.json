@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud App Engine Admin Applications Versions API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Versions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud App Engine List Versions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services/:servicesId/versions",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "servicesId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the versions of a service."
+        },
+        {
+          "info": {
+            "name": "Google Cloud App Engine Create Version",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://appengine.googleapis.com/v1/apps/:appsId/services/:servicesId/versions",
+            "params": [
+              {
+                "name": "appsId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "servicesId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deploys code and resource files to a new version."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
