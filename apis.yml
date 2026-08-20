@@ -28,6 +28,13 @@ tags:
   - App Engine
   - Compute
   - Google Cloud
+  - Platform-as-a-Service
+  - Serverless
+  - Web Applications
+tags_raw:
+  - App Engine
+  - Compute
+  - Google Cloud
   - PaaS
   - Serverless
   - Web Applications
@@ -38,6 +45,8 @@ apis:
   humanURL: https://cloud.google.com/appengine/docs/admin-api
   baseURL: https://appengine.googleapis.com
   tags:
+  - Application
+  tags_raw:
   - Applications
   properties:
   - type: OpenAPI
@@ -56,6 +65,8 @@ apis:
   humanURL: https://cloud.google.com/appengine/docs/admin-api
   baseURL: https://appengine.googleapis.com
   tags:
+  - Application
+  tags_raw:
   - Apps
   properties:
   - type: OpenAPI
