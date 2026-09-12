@@ -128,6 +128,8 @@ apis:
   - type: JSONSchema
     url: json-schema/appengine-application.json
 common:
+  - type: Website
+    url: https://www.google.com/
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/google-cloud-app-engine/overview
   - type: AgenticAccess
@@ -169,3 +171,5 @@ integrations:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: google-cloud-platform
+x-relationship: product

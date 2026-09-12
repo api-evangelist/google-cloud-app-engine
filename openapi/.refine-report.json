@@ -15,6 +15,12 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "google-cloud-app-engine-applications-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-cloud-app-engine-apps-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-cloud-app-engine-instances-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-cloud-app-engine-versions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }
