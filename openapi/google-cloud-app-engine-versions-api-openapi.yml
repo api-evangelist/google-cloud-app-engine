@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud App Engine Admin Applications Versions API
+  title: Google Cloud App Engine Admin Versions API
   description: Provisions and manages developer App Engine applications, including deploying versions, managing traffic, and configuring services.
   version: 1.0.0
   contact:
@@ -82,24 +82,6 @@ paths:
                 $ref: '#/components/schemas/Operation'
 components:
   schemas:
-    Operation:
-      type: object
-      properties:
-        name:
-          type: string
-        done:
-          type: boolean
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-            message:
-              type: string
-        response:
-          type: object
-        metadata:
-          type: object
     Version:
       type: object
       properties:
@@ -122,6 +104,24 @@ components:
           type: string
         versionUrl:
           type: string
+    Operation:
+      type: object
+      properties:
+        name:
+          type: string
+        done:
+          type: boolean
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+        response:
+          type: object
+        metadata:
+          type: object
   securitySchemes:
     oauth2:
       type: oauth2

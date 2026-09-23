@@ -1,10 +1,7 @@
 {
   "provider": "google-cloud-app-engine",
   "sources": [
-    "google-cloud-app-engine-applications-api-openapi.yml",
-    "google-cloud-app-engine-apps-api-openapi.yml",
-    "google-cloud-app-engine-instances-api-openapi.yml",
-    "google-cloud-app-engine-versions-api-openapi.yml"
+    "_original/appengine-openapi.yml"
   ],
   "outputs": [
     "google-cloud-app-engine-applications-api-openapi.yml",
@@ -16,11 +13,18 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "google-cloud-app-engine-applications-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-cloud-app-engine-apps-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-cloud-app-engine-instances-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-cloud-app-engine-versions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "appengine-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "appengine-openapi.yml: tagged paths GET /apps/{appsId}/services -> Apps",
+    "appengine-openapi.yml: tagged paths GET /apps/{appsId}/services/{servicesId} -> Apps",
+    "appengine-openapi.yml: tagged paths DELETE /apps/{appsId}/services/{servicesId} -> Apps",
+    "appengine-openapi.yml: declared missing tag: Apps",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "google-cloud-app-engine-applications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-cloud-app-engine-apps-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-cloud-app-engine-instances-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-cloud-app-engine-versions-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

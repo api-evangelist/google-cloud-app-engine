@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud App Engine Admin Applications Instances API
+  title: Google Cloud App Engine Admin Instances API
   description: Provisions and manages developer App Engine applications, including deploying versions, managing traffic, and configuring services.
   version: 1.0.0
   contact:
