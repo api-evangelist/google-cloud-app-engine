@@ -1,0 +1,47 @@
+slug: google-cloud-app-engine
+provider: Google Cloud App Engine
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Applications
+  spec_file: google-cloud-app-engine-applications-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: '"Provisions and manages developer App Engine applications"; GET /apps/{appsId} getApplication,
+    PATCH updateApplication'
+  reason: Managing the configuration of a hosted application on a serverless cloud platform is cloud infrastructure/platform
+    administration, not a line-of-business capability. Cross-industry IT Infrastructure Management is
+    the honest fit.
+- tag: Apps
+  spec_file: google-cloud-app-engine-apps-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.72
+  evidence: GET /apps/{appsId}/services listServices, DELETE /apps/{appsId}/services/{servicesId} deleteService;
+    schema "Service"
+  reason: Operations list, fetch and delete App Engine services — administration of cloud-hosted compute
+    resources, i.e. IT infrastructure management. The tag 'Apps' here means cloud platform service resources,
+    not business applications portfolio.
+- tag: Instances
+  spec_file: google-cloud-app-engine-instances-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.72
+  evidence: GET /apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances listInstances; schema
+    "Instance"
+  reason: Listing running compute instances backing an app version is cloud compute infrastructure visibility
+    — IT Infrastructure Management.
