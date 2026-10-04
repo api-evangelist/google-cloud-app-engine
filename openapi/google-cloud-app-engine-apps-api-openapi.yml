@@ -96,22 +96,6 @@ paths:
                 $ref: '#/components/schemas/Operation'
 components:
   schemas:
-    Service:
-      type: object
-      properties:
-        name:
-          type: string
-        id:
-          type: string
-        split:
-          type: object
-          properties:
-            shardBy:
-              type: string
-            allocations:
-              type: object
-              additionalProperties:
-                type: number
     Operation:
       type: object
       properties:
@@ -130,6 +114,22 @@ components:
           type: object
         metadata:
           type: object
+    Service:
+      type: object
+      properties:
+        name:
+          type: string
+        id:
+          type: string
+        split:
+          type: object
+          properties:
+            shardBy:
+              type: string
+            allocations:
+              type: object
+              additionalProperties:
+                type: number
   securitySchemes:
     oauth2:
       type: oauth2
