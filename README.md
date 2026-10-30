@@ -1,4 +1,4 @@
-# Google Cloud App Engine (google-cloud-app-engine)
+# Google Cloud App Engine
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,68 +66,158 @@
 
 Google Cloud App Engine is a fully managed, serverless platform for developing and hosting web applications at scale. It supports popular programming languages and provides built-in services and APIs such as NoSQL datastores, memcache, and a user authentication API, allowing developers to focus on writing code without managing the underlying infrastructure.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-search/google-cloud-app-engine/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-search/google-cloud-app-engine/refs/heads/main/apis.yml)
+**Areas:** App Engine · Compute · Google Cloud · Platform-as-a-Service · Serverless · Web Applications
 
-## Scope
+## Google Cloud App Engine on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Cloud App Engine is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-cloud-app-engine/](https://apis.io/providers/google-cloud-app-engine/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- App Engine
-- Compute
-- Google Cloud
-- PaaS
-- Serverless
-- Web Applications
+- [Google Cloud App Engine Applications API](https://apis.io/apis/google-cloud-app-engine/google-cloud-app-engine-applications-api/) — Manage App Engine applications
+- [Google Cloud App Engine Apps API](https://apis.io/apis/google-cloud-app-engine/google-cloud-app-engine-apps-api/) — The Apps API from Google Cloud App Engine — 2 operation(s) for apps.
+- [Google Cloud App Engine Instances API](https://apis.io/apis/google-cloud-app-engine/google-cloud-app-engine-instances-api/) — Manage instances running a version
+- [Google Cloud App Engine Versions API](https://apis.io/apis/google-cloud-app-engine/google-cloud-app-engine-versions-api/) — Manage versions of a service
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Cloud App Engine Admin API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The App Engine Admin API enables developers to provision and manage their App Engine applications programmatically, including deploying new versions, managing traffic splitting, configuring services, and monitoring application health.
+- [Google Cloud App Engine Agentic Access](https://apis.io/agentic-access/google-cloud-app-engine/google-cloud-app-engine-agentic-access/)
 
-- **Human URL:** [https://cloud.google.com/appengine/docs/admin-api](https://cloud.google.com/appengine/docs/admin-api)
-- **Base URL:** `https://appengine.googleapis.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Applications
-- Deployments
-- Instances
-- Versions
+- [Google Cloud App Engine Application](https://apis.io/schemas/google-cloud-app-engine/appengine-application/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://cloud.google.com/appengine/docs/admin-api/reference/rest)
-- [OpenAPI](openapi/appengine-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/appengine.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/appengine.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://cloud.google.com/appengine/docs/admin-api/access-control)
-- [Getting Started](https://cloud.google.com/appengine/docs/getting-started)
-- [JSON Schema](json-schema/appengine-application.json) — [JSON Schema](https://json-schema.org/specification)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [Appengine Context](https://apis.io/jsonld/google-cloud-app-engine/appengine-context/)
 
-- [GitHub Organization](https://github.com/GoogleCloudPlatform)
-- [Portal](https://cloud.google.com/appengine)
-- [Getting Started](https://cloud.google.com/appengine/docs/getting-started)
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [Google Cloud App Engine Admin API](https://apis.io/collections/google-cloud-app-engine/open-appengine/)
+- [Google Cloud App Engine Admin Applications API](https://apis.io/collections/google-cloud-app-engine/open-google-cloud-app-engine-applications-api/)
+- [Google Cloud App Engine Admin Applications Apps API](https://apis.io/collections/google-cloud-app-engine/open-google-cloud-app-engine-apps-api/)
+- [Google Cloud App Engine Admin Applications Instances API](https://apis.io/collections/google-cloud-app-engine/open-google-cloud-app-engine-instances-api/)
+- [Google Cloud App Engine Admin Applications Versions API](https://apis.io/collections/google-cloud-app-engine/open-google-cloud-app-engine-versions-api/)
+- [Google Cloud App Engine Admin Applications API](https://apis.io/collections/google-cloud-app-engine/postman-google-cloud-app-engine-applications-api/)
+- [Google Cloud App Engine Admin Applications Apps API](https://apis.io/collections/google-cloud-app-engine/postman-google-cloud-app-engine-apps-api/)
+- [Google Cloud App Engine Admin Applications Instances API](https://apis.io/collections/google-cloud-app-engine/postman-google-cloud-app-engine-instances-api/)
+- [Google Cloud App Engine Admin Applications Versions API](https://apis.io/collections/google-cloud-app-engine/postman-google-cloud-app-engine-versions-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Cloud App Engine — jsonschema rules](https://apis.io/rules/google-cloud-app-engine/google-cloud-app-engine-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Cloud App Engine Authentication](https://apis.io/security/google-cloud-app-engine/google-cloud-app-engine-authentication/)
+- [Google Cloud App Engine Domain Security](https://apis.io/security/google-cloud-app-engine/google-cloud-app-engine-domain-security/)
+- [Google Cloud App Engine Vulnerability Disclosure](https://apis.io/security/google-cloud-app-engine/google-cloud-app-engine-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Cloud App Engine Scopes](https://apis.io/scopes/google-cloud-app-engine/google-cloud-app-engine-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Cloud App Engine Plans Pricing](https://apis.io/plans/google-cloud-app-engine/google-cloud-app-engine-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Cloud App Engine Rate Limits](https://apis.io/rate-limits/google-cloud-app-engine/google-cloud-app-engine-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Cloud App Engine Finops](https://apis.io/finops/google-cloud-app-engine/google-cloud-app-engine-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://cloud.google.com/appengine/docs)
-- [Authentication](https://cloud.google.com/docs/authentication)
+- [Getting started](https://cloud.google.com/appengine/docs/getting-started)
 - [Pricing](https://cloud.google.com/appengine/pricing)
-- [Terms of Service](https://cloud.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://cloud.google.com/appengine/docs/support)
-- [JSON-LD](json-ld/appengine-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Integrations](https://cloud.google.com/marketplace)
+- [Terms of service](https://cloud.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/GoogleCloudPlatform)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 45.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 58.1 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 36.9 |
+| Access clarity | 39.5 |
+
+**Agent readiness 24.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 40.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-cloud-app-engine/](https://apis.io/providers/google-cloud-app-engine/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Cloud App Engine: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-cloud-app-engine/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
